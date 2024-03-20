@@ -1,0 +1,72 @@
+.footerh3 {
+    text-align: left;
+}
+
+.footerp {
+    text-align: center;
+}
+
+.footerbutton {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    font-family: "Big Shoulders Stencil Display", sans-serif;
+    background-color: #25a5be;
+    display: flex;
+    justify-content: center;
+    transition: all 0.3s;
+    box-shadow: 7.5px 7.5px 0 #efe9e9; /* 25% enlargement  */
+    border-radius: 25%;
+
+}
+
+.footerinstagram:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+
+.footertwitter:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+
+.footerfacebook:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+
+.footerinput ::placeholder{
+    font-family: "Big Shoulders Stencil Display", sans-serif;
+}
+
+.footerinput {
+    font-family: "Big Shoulders Stencil Display", sans-serif;
+}
+
+.footerh3 {
+    font-family: "Big Shoulders Stencil Display", sans-serif;
+}
+
+.footerli {
+    font-family: "Big Shoulders Stencil Display", sans-serif;
+}
+
+p {
+    font-family: "Big Shoulders Stencil Display", sans-serif;
+    font-style: italic;
+}
+
+.footerbutton:hover {
+    background-color: #e9381d;
+}
+
+.quick-links{
+    background-color: #e9381d;
+    
+}
+
+.footerinput {
+    border-radius: 15%;
+}
+  

@@ -1,0 +1,41 @@
+.search-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    position: absolute; /* or 'fixed' depending on your layout */
+    top: 450px; /* Adjust the top position as needed */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.9); /* Example background color with transparency */
+    z-index: 1000;
+    border-radius: 15px;
+    
+    
+  }
+  
+  .search-input {
+    margin-right: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: "Big Shoulders Stencil Display", sans-serif;
+  }
+  
+  .search-button {
+    background-color: #007bff; /* Background color for the search button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: "Big Shoulders Stencil Display", sans-serif;
+  }
+  
+  .search-button:hover {
+    background-color: #0056b3; /* Darker background color on hover */
+  }
+  
