@@ -1,0 +1,28 @@
+.brands-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .brands-row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .brand-logo {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .big-logo {
+    width: 200px;
+  }
+  
+  .small-logo {
+    width: 150px;
+  }
+  
+  .tiny-logo {
+    width: 100px;
+  }
+  

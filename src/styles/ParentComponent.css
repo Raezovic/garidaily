@@ -1,0 +1,50 @@
+.parent-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .search-results-container {
+    margin-top: 20px;
+  }
+  
+  .make-container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .make-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .cars {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .car-details {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 200px;
+  }
+  
+  .car-details img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .car-details h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .car-details p {
+    margin: 5px 0;
+  }
+  
