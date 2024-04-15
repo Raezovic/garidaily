@@ -6,6 +6,7 @@
   right: 20px; /* Adjust the right position as needed */
   z-index: 999; /* Ensure it's above other content */
   transition: all 0.3s ease; /* Add transition for smooth animation */
+  
 }
 
 .open-button,
@@ -66,6 +67,19 @@
   margin: 0;
   max-height: 300px; /* Set maximum height for messages */
   overflow-y: auto; /* Add vertical scrollbar if needed */
+}
+
+.messages::-webkit-scrollbar {
+  width: 8px; /* Set the width of the scrollbar */
+}
+
+.messages::-webkit-scrollbar-thumb {
+  background-color: #888; /* Set the color of the thumb */
+  border-radius: 4px; /* Set border-radius of the thumb */
+}
+
+.messages::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Change color on hover */
 }
 
 .messages li {
