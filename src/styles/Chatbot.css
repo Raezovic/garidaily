@@ -1,0 +1,121 @@
+/* Chatbot container */
+.chatbot-container {
+  position: fixed;
+  font-family: "Big Shoulders Stencil Display", sans-serif;
+  bottom: 20px; /* Adjust the bottom position as needed */
+  right: 20px; /* Adjust the right position as needed */
+  z-index: 999; /* Ensure it's above other content */
+  transition: all 0.3s ease; /* Add transition for smooth animation */
+}
+
+.open-button,
+.close-button {
+  border: none;
+  border-radius: 4px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-family: "Big Shoulders Stencil Display", sans-serif; /* Add font-family */
+}
+
+.open-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 50%; /* Make the button circular */
+  padding: 20px; /* Increase padding for better appearance */
+  cursor: pointer;
+  font-size: 24px; /* Adjust font size */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+  position: relative; /* Position the logo */
+}
+
+.open-button:hover {
+  background-color: #45a049;
+}
+
+.open-button::before {
+  /* content: url('../Images/robot.png'); */
+  position: absolute;
+  right: 20px;
+  width: 300px;
+  height: 1000px;
+  
+
+  transform: translate(-50%, -50%); /* Center the logo */
+}
+
+.close-button {
+  background-color: #f44336;
+  color: white;
+}
+
+/* When chatbot is open */
+.chatbot-container.open {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 15px; /* Adjusted padding */
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 350px; /* Set maximum width */
+  max-height: 400px; /* Set maximum height */
+}
+
+.messages {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-height: 300px; /* Set maximum height for messages */
+  overflow-y: auto; /* Add vertical scrollbar if needed */
+}
+
+.messages li {
+  margin-bottom: 10px;
+}
+
+.user {
+  text-align: right;
+  background-color: #e5e5ea;
+}
+
+.user,
+.chatbot {
+  text-align: left;
+  display: inline-block; /* Display messages inline */
+  max-width: 70%; /* Set maximum width for messages */
+  padding: 8px 12px; /* Padding for messages */
+  border-radius: 20px; /* Rounded corners for messages */
+}
+
+.chatbot {
+  background-color: #007bff; /* Background color for chatbot messages */
+  color: white; /* Text color for chatbot messages */
+  text-align: left;
+}
+
+.chatbot-container form {
+  display: flex;
+  align-items: center;
+  margin-top: 10px; /* Add margin for better spacing */
+}
+
+.chatbot-container input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: "Big Shoulders Stencil Display", sans-serif; /* Add font-family */
+}
+
+.chatbot-container button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  margin-left: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.chatbot-container button[type="submit"]:hover {
+  background-color: #45a049;
+}

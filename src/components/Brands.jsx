@@ -18,6 +18,7 @@ import Volkswagen from '../Images/carlogos/Volkswagen.png';
 const Brands = () => {
   return (
     <div className="brands-container">
+      
       <div className="brands-row">
         <img src={Porsche} alt="Brand 1" className="brand-logo big-logo" />
         <img src= {Merc} alt="Brand 2" className="brand-logo big-logo" />

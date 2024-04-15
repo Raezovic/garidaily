@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/Navbar.css'; // Import CSS for styling (create this file if not exists)
 import logo from '../Images/garidaily.png'; // Import your logo image
 
@@ -14,9 +15,9 @@ const Navbar = () => {
       </div>
       <div className="navbar-right">
         {/* Navigation buttons */}
-        <button className="nav-button">Home</button>
-        <button className="nav-button">Cars</button>
-        <button className="nav-button">Dealers</button>
+        <Link to="/" className="nav-button">Home</Link>
+        
+        <Link to="/dealers" className="nav-button">Dealers</Link>
       </div>
     </div>
   );

@@ -6,11 +6,13 @@
     background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
     backdrop-filter: blur(10px); /* Apply a blur effect */
     color: white;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 95%;
     z-index: 1000;
+    font-size: 14px;
+    
     
   }
   
@@ -24,9 +26,10 @@
   }
   
   .logo {
-    width: 150px; /* Adjust according to your logo size */
+    width: 100px; /* Adjust according to your logo size */
     height: auto;
     margin-right: 10px;
+    border-radius: 5px;
   }
   
   .nav-button {

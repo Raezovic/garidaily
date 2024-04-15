@@ -2,7 +2,7 @@ import React from 'react';
 import Facebook from '../Images/Icons/facebook.png';
 import Twitter from '../Images/Icons/twitter-sign.png';
 import Instagram from '../Images/Icons/instagram.png';
-import Moti from '../Images/car-rental (1).png';
+import Moti from '../Images/garidaily.png';
 import '../styles/Footer.css';
 
 
@@ -41,7 +41,7 @@ export function Footer() {
       </div>
 
       <div className="footer-section" style={{ flex: 1, }}>
-        <h3 class="footerh3">CarMoti</h3>
+        <h3 class="footerh3">GariDaily</h3>
         <div className="social-media" style={{ display: 'flex', alignItems: 'center' }}>
         <img src={Moti} alt="Moti" class="footerinstagram" style={{ width: '90px' }} />
           

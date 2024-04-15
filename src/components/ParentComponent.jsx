@@ -48,9 +48,19 @@ const ParentComponent = () => {
     }
   };
 
+  const handleCloseForm = () => {
+    setSelectedCar(null);
+    setShowForm(false);
+  };
+
+  const handleCloseSearchResults = () => {
+    setSearchResults([]);
+    setSearchData(null);
+  };
+
   return (
     <div className="parent-container">
-      <h1>Car Search</h1>
+    
       <Search onSearch={handleSearch} />
       {searchResults.length > 0 && (
         <div className="search-results-container">
@@ -64,7 +74,9 @@ const ParentComponent = () => {
                   <p>Year: {car.year}</p>
                   <p>Price: ${car.price}</p>
                   {car.imageUrl && <img src={car.imageUrl} alt={car.model} className="car-image" />}
-                  <button onClick={() => handleCarSelect(car)}>Select Car</button>
+                  <button className="select-button" onClick={() => handleCarSelect(car)}>Select Car</button>
+                  <button className="close-button1" onClick={handleCloseSearchResults}>Close</button>
+   
                 </div>
               ))}
             </div>
@@ -73,6 +85,8 @@ const ParentComponent = () => {
       )}
       {showForm && selectedCar && (
         <div className="selected-car-form">
+          
+          <button className="close-button" onClick={handleCloseForm}>Close</button>
           <h2>Selected Car</h2>
           <p>Model: {selectedCar.model}</p>
           <p>Year: {selectedCar.year}</p>

@@ -82,7 +82,7 @@ const CarsList = ({ searchResults }) => {
                 <img src={car.imageUrl} alt={car.model} />
                 <p>Year: {car.year}</p>
                 <p>Price: ${car.price}</p>
-                <button onClick={() => handleButtonClick(car)}>Select</button>
+                <button className="submit-btn" onClick={() => handleButtonClick(car)}>Select</button>
               </div>
             ))}
           </div>
@@ -101,7 +101,7 @@ const CarsList = ({ searchResults }) => {
             <input type="text" name="name" placeholder="Name" value={formData.name} onChange={handleInputChange} required />
             <input type="text" name="number" placeholder="Phone Number" value={formData.number} onChange={handleInputChange} required />
             <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleInputChange} required />
-            <button type="submit">Submit</button>
+            <button  className="submit-btn-form" type="submit">Submit</button>
           </form>
         </div>
       )}

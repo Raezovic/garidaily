@@ -69,6 +69,64 @@ app.get('/api/gari', async (req, res) => {
   }
 });
 
+app.post('/api/chatbot', async (req, res) => {
+  try {
+    console.log("Received request body:", req.body);
+    const { message } = req.body;
+
+    console.log("Received message:", message);
+
+    let response;
+
+    // Search for cars based on user query
+    const makes = await Car.find();
+
+    if (message.includes('available cars') || message.includes('available vehicles')) {
+      // Display all available cars
+      response = 'Here are the available cars:\n';
+      makes.forEach((make) => {
+        make.cars.forEach((car) => {
+          response += `- ${make.make} ${car.model}, Year: ${car.year}, Price: $${car.price}\n`;
+        });
+      });
+    } else {
+      // Search for cars based on make, model, or year
+      const query = message.trim();
+      const regex = new RegExp(query, 'i'); // 'i' flag makes the regex case-insensitive
+
+      const matchingCars = makes.reduce((acc, make) => {
+        make.cars.forEach((car) => {
+          if (
+            regex.test(make.make) ||
+            regex.test(car.model) ||
+            regex.test(car.year.toString())
+          ) {
+            acc.push({ make: make.make, model: car.model, year: car.year, price: car.price });
+          }
+        });
+        return acc;
+      }, []);
+
+
+      if (matchingCars.length > 0) {
+        // Display matching cars
+        response = 'Here are the matching cars:\n';
+        matchingCars.forEach((car) => {
+          response += `- ${car.make} ${car.model}, Year: ${car.year}, Price: $${car.price}\n`;
+        });
+      } else {
+        // No matching cars found
+        response = 'Sorry, no matching cars found.';
+      }
+    }
+
+    res.json({ response });
+  } catch (error) {
+    console.error('Error processing chatbot message:', error);
+    res.status(500).json({ message: 'An error occurred. Please try again.' });
+  }
+});
+
 
 // Backend - Express route to handle form submissions
 app.post('/api/submitForm', async (req, res) => {
